@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yuksalish Maktabi Ustozlari" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Bizning Ustozlarimiz - Yuksalish Maktabi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="logo_icon-removebg-preview.png" />
+    <style>
+        .teachers-page-hero {
+            padding: 10rem 5% 4rem;
+            background: var(--bg-dark);
+            text-align: center;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .teachers-page-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 850;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .teachers-page-hero p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .teachers-grid-container {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--bg-dark);
+        }
+
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            justify-items: center;
+        }
+
+        /* Responsive Grid */
+        @media (max-width: 1100px) {
+            .teachers-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 850px) {
+            .teachers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 580px) {
+            .teachers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .teachers-page-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            transform: translateX(-5px);
+        }
+
+        /* =============================================
+         *  TEACHER CARD COMPONENT
+         * ============================================= */
+        .teacher-card-modern {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            max-width: 280px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .teacher-card-modern:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+        }
+
+        /* Teacher image wrapper */
+        .teacher-card-visual {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .teacher-card-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            padding-top: 1.5rem;
+            /* Space for the hat */
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            transition: transform 0.4s ease;
+        }
+
+        .teacher-card-modern:hover .teacher-card-img {
+            transform: scale(1.04);
+        }
+
+        /* Info section */
+        .teacher-card-info {
+            padding: 1rem 1.1rem 1.2rem;
+        }
+
+        /* Keep names forced to brand orange even if global dark mode is on */
+        .teacher-card-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #f97316 !important;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .dark-mode .teacher-card-name {
+            color: #ffffff !important;
+        }
+
+        /* Role detail row */
+        .teacher-card-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: var(--text-muted, #475569);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .teacher-card-detail svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+            stroke: var(--primary, #f68a33);
+        }
+
+        /* Dark mode card */
+        .dark-mode .teacher-card-modern {
+            background: #1a1d23;
+            border-color: rgba(255, 255, 255, 0.07);
+        }
+
+        .dark-mode .teacher-card-detail {
+            color: #a1a1aa;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo logo-3d">
+            <div class="logo-icon-wrapper">
+                <img src="logo_icon-removebg-preview.png" alt="Yuksalish Maktabi Logo" class="brand-logo-svg"
+                    style="object-fit:contain; width:70px; height:70px;">
+            </div>
+            <div class="logo-text">
+                <span class="logo-title">YUKSALISH</span>
+                <span class="logo-subtitle">
+                    <div class="line"></div> MAKTABI <div class="line"></div>
+                </span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="about.html" data-i18n="nav-about">Maktab haqida</a>
+            <a href="index.html#advantages" data-i18n="nav-advantages">Afzalliklar</a>
+            <a href="index.html#opportunities" data-i18n="nav-opportunities">Imkoniyatlar</a>
+            <a href="index.html#programs" data-i18n="nav-programs">Yo'nalishlar</a>
+            <a href="teachers.html" data-i18n="nav-teachers" class="active">Ustozlar</a>
+            <a href="parents.html" data-i18n="nav-parents">Ota-onalar fikri</a>
+            <a href="index.html#admission" data-i18n="nav-admission">Qabul jarayoni</a>
+            <a href="tel:+998881314114" class="mobile-only-link">+998 88 131 41 14</a>
+            <a href="index.html#enroll" class="mobile-only-btn" data-i18n="nav-enroll">Qabulga yozilish</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+            <a href="parents.html" class="nav-parents-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span data-i18n="nav-parents">Ota-onalar fikri</span>
+            </a>
+            <a href="tel:+998881314114" class="nav-phone">+998 88 131 41 14</a>
+            <a href="index.html#enroll" class="nav-cta-btn" data-i18n="nav-enroll">Qabulga yozilish</a>
+        </div>
+    </nav>
+
+    <header class="teachers-page-hero">
+        <div class="container">
+            <a href="index.html" class="back-home">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Bosh sahifaga qaytish
+            </a>
+            <h1 class="section-title" data-i18n="team-title">Bizning ustozlarimiz</h1>
+            <p class="section-subtitle" data-i18n="team-subtitle">Farzandingizga sifatli ta'lim berish uchun biz eng
+                yaxshi mutaxassislardan iborat jamoa</p>
+        </div>
+    </header>
+
+    <main class="teachers-grid-container">
+        <div class="teachers-grid">
+            <!-- Teacher 1 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-green">
+                    <img loading="lazy" src="ustoz1.jpg" alt="Ilhomjon Boborahimov" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Ilhomjon Boborahimov</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Maktab direktori</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 2 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-blue">
+                    <img loading="lazy" src="ustoz2.jpg" alt="Ashirov Abbos" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Ashirov Abbos</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Matematika o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 3 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-blue">
+                    <img loading="lazy" src="ustoz445.jpg" alt="Baymurotov Kamoliddin" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Baymurotov Kamoliddin</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>matematika o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 4 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-blue">
+                    <img loading="lazy" src="ustoz4.jpg" alt="Bekmurodov Bahodir" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Bekmurodov Bahodir</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>matematika o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 5 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-purple">
+                    <img loading="lazy" src="ustoz6.jpg" alt="Nabiyev Adxamjon" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Nabiyev Adxamjon</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Jismoniy tarbiya o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 6 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-yellow">
+                    <img loading="lazy" src="ustoz98.jpg" alt="Fathullayev Fazullo" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Fathullayev Fazullo</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Yuksalish o'qituvchi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 7 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-yellow">
+                    <img loading="lazy" src="ustoz44.jpg" alt="Musulmonqulov Zubayr" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Musulmonqulov Zubayr</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Tarix o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 8 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-yellow">
+                    <img loading="lazy" src="ustoz71.jpg" alt="Nurmatov Muslimjon" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Nurmatov Muslimjon</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Musiqa o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 9 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-purple">
+                    <img loading="lazy" src="ustoz77.jpg" alt="Abduraimoov Ikromjon" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Abduraimoov Ikromjon</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Roboto texnikao'qituvchi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 10 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-yellow">
+                    <img loading="lazy" src="ustoz5.jpg" alt="Abduvaliyeva Xushro'y" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Abduvaliyeva Xushro'y</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Ingliz tili o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 11 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-orange">
+                    <img loading="lazy" src="ustoz90.jpg" alt="Ne'matova Umida" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Ne'matova Umida</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Ingliz tili o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 12 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-orange">
+                    <img loading="lazy" src="ustoz7.jpg" alt="Xomidjonova Yulduzxon" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Xomidjonova Yulduzxon</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Ona tili va adabiyot</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 13 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-purple">
+                    <img loading="lazy" src="ustoz18.jpg" alt="Chinpo'latova Hilola" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Chinpo'latova Hilola</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Boshlang'ich sinf o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 14 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-orange">
+                    <img loading="lazy" src="ustoz19.jpg" alt="Sulaymonova Yulduz" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Sulaymonova Yulduz</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Boshlang'ich sinf o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 15 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-green">
+                    <img loading="lazy" src="ustoz11.jpg" alt="Karabayeva Sevara" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Karabayeva Sevara</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Ingliz tili o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 16 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-blue">
+                    <img loading="lazy" src="ustoz13.jpg" alt="Murodova Shahodat" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Murodova Shahodat</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Rus tili o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 17 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-yellow">
+                    <img loading="lazy" src="ustoz14.jpg" alt="Urazaliyeva Yulduz" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Urazaliyeva Yulduz</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Boshlang'ich sinf o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 18 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-purple">
+                    <img loading="lazy" src="ustoz15.jpg" alt="Rahmatova Feruza" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Rahmatova Feruza</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Boshlang'ich sinf o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 19 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-orange">
+                    <img loading="lazy" src="ustoz16.jpg" alt="Eshonqulova Nigora" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Eshonqulova Nigora</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span> Sinf rahbari</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher 20 -->
+            <div class="teacher-card-modern">
+                <div class="teacher-card-visual bg-p-blue">
+                    <img loading="lazy" src="ustoz17.png" alt="Gulnoza Ismoilova" class="teacher-card-img">
+                </div>
+                <div class="teacher-card-info">
+                    <h3 class="teacher-card-name">Gulnoza Ismoilova</h3>
+                    <div class="teacher-card-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <span>Boshlang'ch sinf o'qituvchisi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p data-i18n="footer-copyright">Copyright © 2025 Yuksalish Maktabi. Barcha huquqlar himoyalangan</p>
+            <a href="#" class="public-offer-link" data-i18n="footer-offer">Ommaviy taklif</a>
+        </div>
+    </footer>
+
+    <script>
+        // DARK MODE LOGIKASI
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const mode = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', mode);
+        });
+
+        // Translation System (Simplified for Teachers Page)
+        const translations = {
+            'uz': {
+                'nav-about': 'Maktab haqida', 'nav-advantages': 'Afzalliklar', 'nav-opportunities': 'Imkoniyatlar', 'nav-programs': 'Yo\'nalishlar', 'nav-teachers': 'Ustozlar', 'nav-parents': 'Ota-onalar fikri', 'nav-admission': 'Qabul jarayoni', 'nav-enroll': 'Qabulga yozilish',
+                'team-title': 'Bizning ustozlarimiz', 'team-subtitle': 'Farzandingizga sifatli ta\'lim berish uchun biz eng yaxshi mutaxassislardan iborat jamoa',
+                'footer-copyright': 'Copyright © 2025 Yuksalish Maktabi. Barcha huquqlar himoyalangan', 'footer-offer': 'Ommaviy taklif'
+            },
+            'ru': {
+                'nav-about': 'О нас', 'nav-advantages': 'Преимущества', 'nav-opportunities': 'Возможности', 'nav-programs': 'Направления', 'nav-teachers': 'Учителя', 'nav-parents': 'Мнения родителей', 'nav-admission': 'Прием', 'nav-enroll': 'Запись',
+                'team-title': 'Наши учителя', 'team-subtitle': 'Мы команда лучших специалистов для обеспечения качественного образования вашего ребенка',
+                'footer-copyright': 'Copyright © 2025 Школа Юксалиш. Все права защищены', 'footer-offer': 'Публичная оферта'
+            },
+            'en': {
+                'nav-about': 'About', 'nav-advantages': 'Advantages', 'nav-opportunities': 'Opportunities', 'nav-programs': 'Programs', 'nav-teachers': 'Teachers', 'nav-parents': 'Parents Feedback', 'nav-admission': 'Admission', 'nav-enroll': 'Enroll',
+                'team-title': 'Our Teachers', 'team-subtitle': 'We are a team of best specialists to provide quality education for your child',
+                'footer-copyright': 'Copyright © 2025 Yuksalish School. All Rights Reserved', 'footer-offer': 'Public Offer'
+            }
+        };
+
+        function updateUI(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+
+        const savedLang = localStorage.getItem('preferredLanguage') || 'uz';
+        updateUI(savedLang);
+    </script>
+</body>
+
+</html>

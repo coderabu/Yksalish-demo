@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yuksalish Maktabi Olmaliq" />
+    <meta name="keywords" content="Yuksalish Maktabi Olmaliq" />
+    <meta name="author" content="Yuksalish Maktabi Olmaliq" />
+    <meta name="robots" content="index, follow" />
+    <title>Yuksalish Maktabi - Olmaliq</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="logo_icon-removebg-preview.png" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo logo-3d">
+            <div class="logo-icon-wrapper">
+                <img src="logo_icon-removebg-preview.png" alt="Yuksalish Maktabi Logo" class="brand-logo-svg"
+                    style="object-fit:contain; width:70px; height:70px;">
+            </div>
+            <div class="logo-text">
+                <span class="logo-title">YUKSALISH</span>
+                <span class="logo-subtitle">
+                    <div class="line"></div> MAKTABI <div class="line"></div>
+                </span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="about.html" data-i18n="nav-about">Maktab haqida</a>
+            <a href="#advantages" data-i18n="nav-advantages">Afzalliklar</a>
+            <a href="#opportunities" data-i18n="nav-opportunities">Imkoniyatlar</a>
+            <a href="#programs" data-i18n="nav-programs">Yo'nalishlar</a>
+            <a href="teachers.html" data-i18n="nav-teachers">Ustozlar</a>
+            <a href="parents.html" data-i18n="nav-parents">Ota-onalar fikri</a>
+            <a href="#admission" data-i18n="nav-admission">Qabul jarayoni</a>
+            <a href="tel:+998881314114" class="mobile-only-link">+998 88 131 41 14</a>
+            <a href="#enroll" class="mobile-only-btn" data-i18n="nav-enroll">Qabulga yozilish</a>
+        </div>
+        <div class="nav-right">
+            <div class="lang-switcher">
+                <div class="lang-selected" id="langSelected">
+                    <img src="https://flagcdn.com/uz.svg" alt="Uzbek" class="lang-flag">
+                    <span>UZB</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lang-chevron">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="lang-dropdown">
+                    <div class="lang-option" onclick="setLanguage('uz')">
+                        <img src="https://flagcdn.com/uz.svg" alt="Uzbek" class="lang-flag">
+                        <span>O'zbekcha</span>
+                    </div>
+                    <div class="lang-option" onclick="setLanguage('ru')">
+                        <img src="https://flagcdn.com/ru.svg" alt="Russian" class="lang-flag">
+                        <span>Русский</span>
+                    </div>
+                    <div class="lang-option" onclick="setLanguage('en')">
+                        <img src="https://flagcdn.com/gb.svg" alt="English" class="lang-flag">
+                        <span>English</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+
+            <a href="parents.html" class="nav-parents-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span data-i18n="nav-parents">Ota-onalar fikri</span>
+            </a>
+            <a href="tel:+998881314114" class="nav-phone">+998 88 131 41 14</a>
+            <a href="#enroll" class="nav-cta-btn" data-i18n="nav-enroll">Qabulga yozilish</a>
+            <div class="menu-dots" id="menuDots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-left animate-fade-in-left">
+            <div class="hero-tag animate-fade-in-up">
+                <span class="pulse-dot"></span>
+                <span data-i18n="hero-tag">Yuksalish Maktabi — Kelajak uchun ta'lim</span>
+            </div>
+            <a href="parents.html" class="parent-tag">
+                <svg class="parent-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span data-i18n="nav-parents">Ota-onalar fikri</span>
+            </a>
+            <h1 class="animate-fade-in-up" data-i18n="hero-title">Sifatli <span class="green-text">ta'lim</span>
+                bilan<br>kelajagingizni<br><span class="green-text">quring!</span></h1>
+            <p class="subtitle animate-fade-in-up" data-i18n="hero-subtitle">Zamonaviy muhit, professional ustozlar va
+                innovatsion yondashuv bilan farzandingizga eng yaxshisini bering.</p>
+            <div class="hero-actions animate-fade-in-up">
+                <a href="#enroll" class="hero-cta-btn" data-i18n="hero-cta">Qabulga yozilish</a>
+                <a href="#about" class="hero-secondary-btn" data-i18n="nav-about">Maktab haqida</a>
+            </div>
+        </div>
+        <div class="hero-right animate-fade-in-right">
+            <div class="hero-premium-container">
+                <div class="premium-founder-shape">
+                    <div class="premium-pattern"></div>
+                    <img src="founder.jpg" alt="Muhammadali Eshonqulov" class="premium-founder-img">
+                </div>
+
+                <!-- Glows -->
+                <div class="premium-glow glow-1"></div>
+                <div class="premium-glow glow-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <div style="display: flex; flex-direction: column; gap: 4rem; width: 100%;">
+        <!-- New Detailed About Section -->
+        <section class="about-detailed" id="about">
+            <div class="about-grid">
+                <div class="about-text-content animate-fade-in-left">
+                    <h2 class="section-title" data-i18n="about-title">Maktab haqida</h2>
+                    <p class="about-description" data-i18n="about-desc-1">
+                        Yuksalish maktabi - Ta'limda amaliy tajribaga asoslanadi. Zamonaviy texnologiyalardan
+                        foydalanamiz. Darslarga innovatsion yechimlar bilan yondashamiz. Xalqaro ta'lim
+                        yutuqlaridan foydalanamiz.
+                    </p>
+                    <p class="about-description" data-i18n="about-desc-2">
+                        Tarbiyada yetuk shaxs sifatida kamol topish uchun zarur bo'ladigan ko'nikmalarni
+                        shakllantiramiz.
+                    </p>
+                    <p class="about-description" data-i18n="about-desc-3">
+                        O'quvchilarning o'z imkoniyatlarini to'liq namoyon etishlari hamda barkamol shaxs bo'lib
+                        yetishishlarida ko'maklashamiz.
+                    </p>
+                    <div class="language-info">
+                        <strong data-i18n="about-lang-label">Ta'lim tili:</strong> <span
+                            data-i18n="about-lang-val">O'zbek tili</span>
+                    </div>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3 data-i18n="about-feat-1-h3">Chuqurlashtirilgan fanlar</h3>
+                                <p data-i18n="about-feat-1-p">Maktabimizda chuqurlashtirilgan fanlarimizga e'tibor
+                                    beriladi</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="2" y1="12" x2="22" y2="12" />
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3 data-i18n="about-feat-2-h3">Ta'lim tili</h3>
+                                <p data-i18n="about-feat-2-p">Zamon talabidagi chet tillarini o'rganish</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3 data-i18n="about-feat-3-h3">Yuqori malakali ustozlar</h3>
+                                <p data-i18n="about-feat-3-p">Yuqori malakali ustozlardan bilim olish imkoniyati</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-gallery animate-fade-in-right">
+                    <div class="gallery-item large">
+                        <img loading="lazy" src="gallery_library.png" alt="School Library">
+                    </div>
+                    <div class="gallery-column">
+                        <div class="gallery-item small">
+                            <img loading="lazy" src="gallery_classroom.png" alt="Classroom">
+                        </div>
+                        <div class="gallery-item small">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1543269664-7eef42226a21?q=80&w=2070"
+                                alt="Students">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section class="founder-section" id="founder">
+            <div class="founder-card">
+                <div class="founder-image animate-fade-in-left">
+                    <img src="founder.jpg" alt="Muhammadali Eshonqulov">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="founder-content animate-fade-in-right">
+                    <h2 class="section-title" data-i18n="founder-title">Maktab asoschisi</h2>
+                    <h3 class="founder-name">Muhammadali Eshonqulov</h3>
+                    <p class="founder-bio" data-i18n="founder-bio-1">
+                        Muhammadali Eshonqulov (1994-yilda tug‘ilgan) — o‘zbekistonlik taniqli iqtisodchi,
+                        motivatsion spiker, tadbirkor va “Yuksalish Leaders Academy” hamda “Biznes Kvadrat”
+                        loyihalari asoschisi.
+                    </p>
+                    <p class="founder-bio" data-i18n="founder-bio-2">
+                        Yoshlarga shaxsiy rivojlanish, biznes va yetakchilik bo‘yicha saboq beradi, 10 000 ga
+                        yaqin shogirdlarga ustozlik qilgan. 15 yoshida Jahon iqtisodiyoti va diplomatiya
+                        universiteti talabasi bo‘lgan.
+                    </p>
+                    <div class="quote-box">
+                        <span class="quote-icon">"</span>
+                        <p data-i18n="founder-quote">Sifatli ta'lim - kelajakning poydevoridir. Biz har bir o'quvchining
+                            ichki
+                            potentsialini kashf qilishga yordam beramiz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialized Classes Section -->
+        <section class="specialized-section animate-fade-in-up">
+            <h2 class="section-title text-center" style="width: 100%; margin-bottom: 3rem;" data-i18n="spec-title">
+                Ixtisoslashtirilgan sinflar:
+            </h2>
+            <div class="specialized-grid">
+                <!-- Card 1: Aniq fanlar -->
+                <div class="spec-card animate-fade-in-left">
+                    <div class="spec-card-content">
+                        <h3 data-i18n="spec-aniq-h3">Aniq fanlar:</h3>
+                        <ul>
+                            <li data-i18n="spec-matem">Matematika</li>
+                            <li data-i18n="spec-eng">Ingliz tili</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Muhandislik sinfi -->
+                <div class="spec-card animate-fade-in-right">
+                    <div class="spec-card-content">
+                        <h3 data-i18n="spec-muhandis-h3">Muhandislik sinfi:</h3>
+                        <ul>
+                            <li data-i18n="spec-fizika">Fizika</li>
+                            <li data-i18n="spec-robo">Robototexnika</li>
+                            <li data-i18n="spec-matem">Matematika</li>
+                            <li data-i18n="spec-eng">Ingliz tili</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Tilshunoslik -->
+                <div class="spec-card animate-fade-in-left">
+                    <div class="spec-card-content">
+                        <h3 data-i18n="spec-til-h3">Tilshunoslik:</h3>
+                        <ul>
+                            <li data-i18n="spec-eng">Ingliz tili</li>
+                            <li data-i18n="spec-rus">Rus tili</li>
+                            <li data-i18n="spec-arab">Arab tili</li>
+                            <li data-i18n="spec-koreys">Koreys tili</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4: Tabiiy fanlar -->
+                <div class="spec-card animate-fade-in-right">
+                    <div class="spec-card-content">
+                        <h3 data-i18n="spec-tabiiy-h3">Tabiiy fanlar:</h3>
+                        <ul>
+                            <li data-i18n="spec-kimyo">Kimyo</li>
+                            <li data-i18n="spec-bio">Biologiya</li>
+                            <li data-i18n="spec-eng">Ingliz tili</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="advantages-container animate-fade-in-up delay-2" id="advantages">
+            <h2 class="section-title text-center" style="margin-bottom: 3rem; text-align: center; width: 100%;"
+                data-i18n="adv-title">Nega
+                aynan Yuksalish Maktabini tanlashadi?</h2>
+
+            <div class="advantages-layout">
+                <!-- Left Column (5 cards) -->
+                <div class="adv-column left-col animate-fade-in-left">
+                    <!-- Card 1 -->
+                    <div class="adv-card-new">
+                        <div class="adv-icon-new">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"></path>
+                                <path d="M22 6V5a2 2 0 0 0-2-2h-3"></path>
+                                <path d="M11 2v4a2 2 0 0 1-2 2H5"></path>
+                                <path d="M16 15v.01"></path>
+                                <path d="M12 15v.01"></path>
+                                <path d="M8 15v.01"></path>
+                            </svg>
+                        </div>
+                        <div class="adv-text-new" data-i18n="adv-1">To'liq texnologik</div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="adv-card-new">
+                        <div class="adv-icon-new">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path
+                                    d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72M5.73 20.31c4.54-4.8 9.29-6.32 15.68-5.32M4.9 6.2c3.21 2.22 8.52 3.63 14.88 1.48M2.12 14c4.66.45 8.35-1.07 9.88-5.3" />
+                            </svg>
+                        </div>
+                        <div class="adv-text-new" data-i18n="adv-2">Yopiq sport majmuasi</div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="adv-card-new">
+                        <div class="adv-icon-new">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                        </div>
+                        <div class="adv-text-new" data-i18n="adv-3">Kitobxonlikka qiziqtirish va mutolaa darslari</div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="adv-card-new">
+                        <div class="adv-icon-new">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="4 17 10 11 4 5" />
+                                <line x1="12" y1="19" x2="20" y2="19" />
+                            </svg>
+                        </div>
+                        <div class="adv-text-new" data-i18n="adv-4">Sinflar kesimida IT, sport va san'at to'garaklari
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="adv-card-new">
+                        <div class="adv-icon-new">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                        </div>
+                        <div class="adv-text-new" data-i18n="adv-5">Yopiq va qo'riqlanadigan xavfsiz hudud</div>
+                    </div>
+
+                </div>
+
+                <!-- Center Column (Image) -->
+                <div class="center-col animate-fade-in-right">
+                    <div class="center-pattern"></div>
+                    <img loading="lazy" src="modern_student.jpg" alt="Yuksalish Maktabi O'quvchisi" class="boy-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Opportunities Section -->
+    <section class="opportunities-section animate-fade-in-up" id="opportunities">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="opp-title">Yuksalish maktabi imkoniyatlari</h2>
+            <p class="section-subtitle" data-i18n="opp-subtitle">Yuksalish maktabi o'quvchilarga zamonaviy bilim,
+                ijodkorlik va
+                amaliy ko'nikmalarni rivojlantirish imkonini beradi!</p>
+        </div>
+
+        <div class="opportunities-grid">
+            <!-- Card 1: Ko'nikmalar -->
+            <div class="opp-card card-1 animate-fade-in-left">
+                <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                    </svg></div>
+                <h3 data-i18n="opp-1-h3">Ko'nikmalar</h3>
+                <p data-i18n="opp-1-p">Bolalarga hayoti davomida muhim bo'lgan ko'nikmalarni beramiz</p>
+            </div>
+
+            <!-- Card 2: Tarbiyali muhit -->
+            <div class="opp-card card-2 animate-fade-in-right">
+                <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg></div>
+                <h3 data-i18n="opp-2-h3">Tarbiyali muhit</h3>
+                <p data-i18n="opp-2-p">Bilimga chanqoq va axloqli do'stlar bilan farzandingizni o'rab olamiz</p>
+            </div>
+
+            <!-- Card 3: Sog'lom ovqatlanish -->
+            <div class="opp-card card-3 animate-fade-in-left">
+                <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                        <line x1="6" y1="1" x2="6" y2="4" />
+                        <line x1="10" y1="1" x2="10" y2="4" />
+                        <line x1="14" y1="1" x2="14" y2="4" />
+                    </svg></div>
+                <h3 data-i18n="opp-3-h3">Sog'lom ovqatlanish</h3>
+                <p data-i18n="opp-3-p">Bolalar uchun nutritsiolog tavsiya qilgan sog'lom va foydali taomlar beriladi</p>
+            </div>
+
+            <!-- Card 4: Qulay joylashuv -->
+            <div class="opp-card card-4 animate-fade-in-right">
+                <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg></div>
+                <h3 data-i18n="opp-4-h3">Qulay joylashuv</h3>
+                <p data-i18n="opp-4-p">Maktab shaharning markazida bo'lib, istalgan nuqtadan oson yetib kelinadi</p>
+            </div>
+
+            <!-- Card 5: Qo'shimcha mashg'ulotlar -->
+            <div class="opp-card card-5 animate-fade-in-left">
+                <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                    </svg></div>
+                <h3 data-i18n="opp-5-h3">Qo'shimcha mashg'ulotlar</h3>
+                <p data-i18n="opp-5-p">Farzandingiz fan, til, sport va IT bo'yicha 10 dan ortiq to'garakda qatnashadi
+                </p>
+            </div>
+
+            <!-- Card 6: Zamonaviy sharoitlar -->
+            <div class="opp-card card-6 animate-fade-in-right">
+                <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                        <line x1="12" y1="19" x2="12" y2="23" />
+                        <line x1="8" y1="23" x2="16" y2="23" />
+                    </svg></div>
+                <h3 data-i18n="opp-6-h3">Zamonaviy sharoitlar</h3>
+                <p data-i18n="opp-6-p">O'quvchilar uchun innovatsion metodlar va qulay ta'lim muhiti</p>
+            </div>
+            <!-- Card 7: Grant va stipendiyalar -->
+            <div class="opp-card card-7 animate-fade-in-left">
+                <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg></div>
+                <h3 data-i18n="opp-7-h3">Grant va stipendiyalar</h3>
+                <p data-i18n="opp-7-p">Xalqaro sertifikat olgan o'quvchilar natijasiga qarab stipendiya yutadi</p>
+            </div>
+
+            <!-- Card 8: Cheklangan sinflar -->
+            <div class="opp-card card-8 animate-fade-in-right">
+                <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg></div>
+                <h3 data-i18n="opp-8-h3">Cheklangan sinflar</h3>
+                <p data-i18n="opp-8-p">Har bir sinfda 22+/-2 o'quvchi o'qib, sifatli ta'lim va e'tibor kafolatlanadi</p>
+            </div>
+        </div>
+    </section>
+    </div>
+    </div>
+    </section>
+
+    <!-- Programs Section (Moved here) -->
+    <section class="programs-section" id="programs">
+        <div class="programs-container">
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="prog-title">O'quv dasturlarimiz</h2>
+                <p class="section-subtitle" data-i18n="prog-subtitle">Eng yaxshi ta'lim sifati, tajribali o'qituvchilar
+                    va innovatsion yondashuv
+                    bilan farzandingiz kelajagini biz bilan yarating!</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Card 1: Boshlang'ich -->
+                <div class="program-card animate-fade-in-up">
+                    <div class="card-pattern"></div>
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <div class="program-content">
+                        <span class="program-category" data-i18n="prog-cat-1">Boshlang'ich</span>
+                        <h3 class="program-title" data-i18n="prog-title-1">1-4 sinflar uchun</h3>
+                        <p class="program-desc" data-i18n="prog-desc-1">O'quvchilar ilmga muhabbat paydo qilish qatorida
+                            boshlang'ich bilimlar,
+                            hayotiy ko'nikmalar va odoblar shakllantirish jarayoni.</p>
+                        <button class="program-btn open-modal-btn" data-i18n="prog-btn">Batafsil ma'lumot</button>
+                    </div>
+                </div>
+
+                <!-- Card 2: O'rta -->
+                <div class="program-card animate-fade-in-up delay-1">
+                    <div class="card-pattern"></div>
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <div class="program-content">
+                        <span class="program-category" data-i18n="prog-cat-2">O'rta</span>
+                        <h3 class="program-title" data-i18n="prog-title-2">5-8 sinflar uchun</h3>
+                        <p class="program-desc" data-i18n="prog-desc-2">Barcha fanlardan poydevor bilimlarni egallash,
+                            tanqidiy-tahliliy
+                            fikrlash va muloqot ko'nikmalarini rivojlantirish hamda xorijiy tillardan birini
+                            o'zlashtirish jarayoni.</p>
+                        <button class="program-btn open-modal-btn" data-i18n="prog-btn">Batafsil ma'lumot</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Yuqori -->
+                <div class="program-card animate-fade-in-up delay-2">
+                    <div class="card-pattern"></div>
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <div class="program-content">
+                        <span class="program-category" data-i18n="prog-cat-3">Yuqori</span>
+                        <h3 class="program-title" data-i18n="prog-title-3">9-11 sinflar uchun</h3>
+                        <p class="program-desc" data-i18n="prog-desc-3">O'quvchining salohiyatidan kelib chiqqan holda
+                            aniq, tabiiy yoki
+                            ijtimoiy fanlardan biriga chuqurlashuv, karyerani aniqlash va oliygohga tayyorgarlik
+                            bosqichi.</p>
+                        <button class="program-btn open-modal-btn" data-i18n="prog-btn">Batafsil ma'lumot</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bizning ustozlarimiz Section (New Refined Slider) -->
+    <section class="jamoa-section animate-fade-in-up" id="team">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 4rem;">
+                <h2 class="section-title" data-i18n="team-title">
+                    Bizning ustozlarimiz</h2>
+                <p class="section-subtitle">
+                    O'z sohasining mutaxassislari bo'lgan tajribali ustozlarimiz farzandingizga sifatli ta'lim berishadi
+                </p>
+            </div>
+
+            <div class="jamoa-slider-wrapper" id="jamoaSlider" style="padding: 1.5rem 1rem;">
+                <div class="jamoa-slider" id="jamoaSliderContent" style="display: flex; gap: 2rem; width: max-content;">
+                    <!-- Teacher 1 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-green">
+                            <img loading="lazy" src="ustoz1.jpg" alt="Ilhomjon Boborahimov" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Ilhomjon Boborahimov</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Maktab direktori</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 2 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-blue">
+                            <img loading="lazy" src="ustoz2.jpg" alt="Ashirov Abbos" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Ashirov Abbos</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Matematika o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-blue">
+                            <img loading="lazy" src="ustoz445.jpg" alt="Baymurotov Kamoliddin" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Baymurotov Kamoliddin</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>matematika o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-blue">
+                            <img loading="lazy" src="ustoz4.jpg" alt="Bekmurodov Bahodir" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Bekmurodov Bahodir</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>matematika o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-purple">
+                            <img loading="lazy" src="ustoz6.jpg" alt="Nabiyev Adxamjon" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Nabiyev Adxamjon</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Jismoniy tarbiya o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-yellow">
+                            <img loading="lazy" src="ustoz98.jpg" alt="Fathullayev Fazullo" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Fathullayev Fazullo</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Yuksalish o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-yellow">
+                            <img loading="lazy" src="ustoz44.jpg" alt="Musulmonqulov Zubayr" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Musulmonqulov Zubayr</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Tarix o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Teacher 22 (NEW) -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-yellow">
+                            <img loading="lazy" src="ustoz71.jpg" alt="Nurmatov Muslimjon" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Nurmatov Muslimjon</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Musiqa o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 23 (NEW) -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-purple">
+                            <img loading="lazy" src="ustoz77.jpg" alt="Abduraimoov Ikromjon" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Abduraimoov Ikromjon</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Roboto texnika o'qituvchi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 3 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-yellow">
+                            <img loading="lazy" src="ustoz5.jpg" alt="Abduvaliyeva Xushro'y" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Abduvaliyeva Xushro'y</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Ingliz tili o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-orange">
+                            <img loading="lazy" src="ustoz90.jpg" alt="Ne'matova Umida" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Ne'matova Umida</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Ingliz tili o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-orange">
+                            <img loading="lazy" src="ustoz7.jpg" alt="Xomidjonova Yulduzxon" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Xomidjonova Yulduzxon</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Ona tili va adabiyot</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 4 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-purple">
+                            <img loading="lazy" src="ustoz18.jpg" alt="Chinpo'latova Hilola" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Chinpo'latova Hilola</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Boshlang'ich sinf o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 5 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-orange">
+                            <img loading="lazy" src="ustoz19.jpg" alt="Sulaymonova Yulduz" il class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Sulaymonova Yulduz</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Boshlang'ich sinf o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 6 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-green">
+                            <img loading="lazy" src="ustoz11.jpg" alt="Karabayeva Sevara" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Karabayeva Sevara</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Ingliz tili o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 7 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-blue">
+                            <img loading="lazy" src="ustoz13.jpg" alt="Murodova Shahodat" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Murodova Shahodat</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Rus tili o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 8 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-yellow">
+                            <img loading="lazy" src="ustoz14.jpg" alt="Urazaliyeva Yulduz" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Urazaliyeva Yulduz</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Boshlang'ich sinf o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 9 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-purple">
+                            <img loading="lazy" src="ustoz15.jpg" alt="Rahmatova Feruza" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Rahmatova Feruza</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Boshlang'ich sinf o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 10 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-orange">
+                            <img loading="lazy" src="ustoz16.jpg" alt="Eshonqulova Nigora" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Eshonqulova Nigora</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span> Sinf rahbari</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 12 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-blue">
+                            <img loading="lazy" src="ustoz17.png" alt="Gulnoza Ismoilova" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Gulnoza Ismoilova</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Boshlang'ch sinf o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 13 -->
+                    <div class="teacher-card-modern">
+                        <div class="teacher-card-visual bg-p-yellow">
+                            <img loading="lazy" src="ustoz222.png" alt="Ustoz" class="teacher-card-img">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">Ustoz</h3>
+                            <div class="teacher-card-detail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                                <span>Boshlang'ch sinf o'qituvchisi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End jamoaSliderContent and jamoa-slider-wrapper -->
+
+            <div class="jamoa-controls"
+                style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 2rem;">
+                <button class="jamoa-arrow" onclick="scrollSlider('left')" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
+                <button class="jamoa-arrow" onclick="scrollSlider('right')" aria-label="Next">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+                <a href="teachers.html"
+                    style="color: var(--primary-purple, #6b4c9a); text-decoration: underline; text-underline-offset: 4px; font-weight: 500; font-size: 1.1rem; margin-left: 1rem;"
+                    data-i18n="nav-teachers">Ustozlar</a>
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem; display: none;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Qabul jarayoni bosqichlari Section (NEW/RESTORED) -->
+    <section class="admission-section animate-fade-in-up" id="admission">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="adm-title">Qabul jarayoni bosqichlari</h2>
+                <p class="section-subtitle">Qabul jarayoni oddiy va tushunarli bosqichlardan iborat. Har bir qadamni
+                    tushunib
+                    oling.</p>
+            </div>
+
+            <div class="admission-timeline">
+                <div class="timeline-line"></div>
+
+                <!-- Step 1: Tashrif -->
+                <div class="admission-step left animate-fade-in-left">
+                    <div class="step-number">01</div>
+                    <div class="step-card step-1">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                                <path d="m14 21-1-4 2-3 3 2" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="adm-step-1-h3">Maktabga tashrif</h3>
+                        <p data-i18n="adm-step-1-p">Bizning maktabimizga tashrif buyurib, maktab bilan tanishib va
+                            savollaringizga javoblar oling</p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Imtihon -->
+                <div class="admission-step right animate-fade-in-right">
+                    <div class="step-number">02</div>
+                    <div class="step-card step-2">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <path d="M9 15h6" />
+                                <path d="M12 12h3" />
+                                <path d="M9 12h.01" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="adm-step-2-h3">Belgilangan fanlardan imtihon</h3>
+                        <p data-i18n="adm-step-2-p">Farzandingizni imtihon qilib uni aqliy salohiyatini aniqlaymiz</p>
+                    </div>
+                </div>
+
+                <!-- Step 3: Suhbat -->
+                <div class="admission-step left animate-fade-in-left">
+                    <div class="step-number">03</div>
+                    <div class="step-card step-3">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                <line x1="12" y1="19" x2="12" y2="23" />
+                                <line x1="8" y1="23" x2="16" y2="23" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="adm-step-3-h3">Farzandingiz bilan suhbat</h3>
+                        <p data-i18n="adm-step-3-p">Og'zaki suhbat jarayonida asosan bolaning IQ darajasi, axloqi va
+                            tasavvur qobiliyatlarini tekshiramiz</p>
+                    </div>
+                </div>
+
+                <!-- Step 4: Hujjatlar -->
+                <div class="admission-step right animate-fade-in-right">
+                    <div class="step-number">04</div>
+                    <div class="step-card step-4">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="adm-step-4-h3">Kerakli hujjatlarni taqdim etish</h3>
+                        <p data-i18n="adm-step-4-p">Yuqoridagi bosqichlardan muvaffaqiyatli o'tgan o'quvchilar hujjat
+                            topshirish jarayoniga o'tishlari mumkin bo'ladi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qabulga yozilish Section -->
+    <section class="enroll-section animate-fade-in-up" id="enroll">
+        <div class="enroll-container">
+            <h2 class="enroll-title" data-i18n="enroll-title">Qabulga yoziling</h2>
+            <p class="enroll-desc" data-i18n="enroll-desc">O'quv markazimizda yangi o'quv yili uchun
+                qabul boshlandi!
+                Joylar cheklangan,
+                tezroq
+                yoziling.</p>
+
+            <form class="enroll-form" id="telegramForm">
+                <div class="form-group">
+                    <label data-i18n="form-name">Ism</label>
+                    <input type="text" id="ism" required />
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form-surname">Familiya</label>
+                    <input type="text" id="familiya" required />
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form-class">Sinf</label>
+                    <select id="sinf" required>
+                        <option value="" disabled selected data-i18n="form-class-placeholder">
+                        </option>
+                        <option value="0-sinf" data-i18n="class-0">0-sinf</option>
+                        <option value="1-sinf" data-i18n="class-1">1-sinf</option>
+                        <option value="2-sinf" data-i18n="class-2">2-sinf</option>
+                        <option value="3-sinf" data-i18n="class-3">3-sinf</option>
+                        <option value="4-sinf" data-i18n="class-4">4-sinf</option>
+                        <option value="5-sinf" data-i18n="class-5">5-sinf</option>
+                        <option value="6-sinf" data-i18n="class-6">6-sinf</option>
+                        <option value="7-sinf" data-i18n="class-7">7-sinf</option>
+                        <option value="8-sinf" data-i18n="class-8">8-sinf</option>
+                        <option value="9-sinf" data-i18n="class-9">9-sinf</option>
+                        <option value="10-sinf" data-i18n="class-10">10-sinf</option>
+                        <option value="11-sinf" data-i18n="class-11">11-sinf</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form-phone">Telefon raqam</label>
+                    <input type="tel" id="tel" required value="+998" />
+                </div>
+                <button type="submit" class="submit-btn" data-i18n="form-submit">Ariza
+                    qoldirish</button>
+            </form>
+        </div>
+    </section>
+
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content animate-fade-in-up">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 data-i18n="modal-title">Maktabimiz haqida savollaringiz bo'lsa, quyida
+                    ma'lumotlaringizni kiriting.
+                </h2>
+                <p data-i18n="modal-subtitle">Biz sizga tez orada bog'lanamiz.</p>
+            </div>
+            <form id="modalTelegramForm" class="modal-form">
+                <div class="modal-form-group">
+                    <input type="text" id="modalIsm" placeholder="Ism-familiyangiz" required />
+                </div>
+                <div class="modal-form-group phone-input-wrapper">
+                    <div class="uzb-flag">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg" alt="UZB">
+                        <span>+998</span>
+                    </div>
+                    <input type="tel" id="modalTel" placeholder="00-000-0000" maxlength="11" required />
+                </div>
+                <button type="submit" class="modal-submit-btn">Ma'lumot olish</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-main">
+                <!-- Section 1: Logo and CTA -->
+                <div class="footer-section brand-section">
+                    <div class="logo logo-3d">
+                        <div class="logo-icon-wrapper">
+                            <img src="logo_icon-removebg-preview.png" alt="Yuksalish Maktabi Logo"
+                                class="brand-logo-svg" style="object-fit:contain; width:70px; height:70px;">
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">YUKSALISH</span>
+                            <span class="logo-subtitle">
+                                <div class="line"></div> MAKTABI <div class="line"></div>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="footer-cta-btn open-modal-btn">Konsultatsiya olish</button>
+                </div>
+
+                <!-- Section 2: Contact and Nav -->
+                <div class="footer-section info-section">
+                    <h3 class="footer-heading" data-i18n="footer-contact">Aloqa uchun</h3>
+                    <div class="contact-number">
+                        <span class="phone-icon">📞</span>
+                        <a href="tel:+998881314114">+998 88 131 41 14</a>
+                    </div>
+                    <ul class="footer-nav-list">
+                        <li><a href="#about">Bosh sahifa</a></li>
+                        <li><a href="#advantages">Biz haqimizda</a></li>
+                        <li><a href="teachers.html">Bizning ustozlarimiz</a></li>
+                        <li><a href="#opportunities">Yuksalish Maktabida karyera</a></li>
+                    </ul>
+                </div>
+                <!-- Section 3: Social Networks -->
+                <div class="footer-section social-section">
+                    <h3 class="footer-heading" data-i18n="footer-social">Bizni ijtimoiy tarmoqlarda
+                        kuzating</h3>
+                    <ul class="social-links-list">
+                        <li>
+                            <a href="https://www.youtube.com/@Yuksalish_maktabi_Olmaliq" target="_blank"
+                                rel="noreferrer">
+                                <span class="social-icon youtube"></span>
+                                YouTube
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/yuksalish_maktabi_olmaliq" target="_blank"
+                                rel="noreferrer">
+                                <span class="social-icon instagram"></span>
+                                Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/Yuksalish_maktabi_olmaliq" target="_blank" rel="noreferrer">
+                                <span class="social-icon telegram"></span>
+                                Telegram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 4: Map and Address -->
+                <div class="footer-section map-section">
+                    <div class="mini-map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.8152342378344!2d69.59620357591321!3d40.85219427137452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae2d0505e97b01%3A0x6db05ad7ccd1b58b!2sYUKS%CE%9BLISH%20maktabi%20%7C%20OLM%CE%9BLIQ!5e0!3m2!1sru!2s!4v1713256193796!5m2!1sru!2s"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="address-details">
+                        <p><strong data-i18n="footer-address-label">Manzil:</strong> <span
+                                data-i18n="footer-address-val">Olmaliq shahar, Amir Temur ko'chasi, 18-uy</span></p>
+                        <p><strong data-i18n="footer-landmark-label">Mo'ljal:</strong> <span
+                                data-i18n="footer-landmark-val">Amir Temur ko'chasi</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer-copyright">Copyright © 2025 Yuksalish Maktabi. All Rights
+                    Reserved</p>
+                <a href="#" class="public-offer-link" data-i18n="footer-offer">Public Offer</a>
+            </div>
+        </div>
+        <div class="footer-triangles"></div>
+    </footer>
+
+
+
+
+    <script>
+        // Telefon formati (Input Mask)
+        function formatPhoneNumber(input) {
+            let value = input.value.replace(/\D/g, "");
+            if (input.id === "tel") {
+                if (!value.startsWith("998")) {
+                    value = "998";
+                }
+                let formatted = "+998 ";
+                if (value.length > 3) formatted += "(" + value.substring(3, 5);
+                if (value.length > 5) formatted += ") " + value.substring(5, 8);
+                if (value.length > 8) formatted += "-" + value.substring(8, 10);
+                if (value.length > 10) formatted += "-" + value.substring(10, 12);
+                input.value = formatted;
+            } else if (input.id === "modalTel") {
+                let formatted = "";
+                if (value.length > 0) formatted += "(" + value.substring(0, 2);
+                if (value.length > 2) formatted += ") " + value.substring(2, 5);
+                if (value.length > 5) formatted += "-" + value.substring(5, 7);
+                if (value.length > 7) formatted += "-" + value.substring(7, 9);
+                input.value = formatted;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const telInput = document.getElementById('tel');
+            const modalTelInput = document.getElementById('modalTel');
+
+            if (telInput) {
+                telInput.addEventListener('input', function () { formatPhoneNumber(this); });
+                // Max length for +998 (XX) XXX-XX-XX is 19 characters
+                telInput.setAttribute('maxlength', '19');
+            }
+            if (modalTelInput) {
+                modalTelInput.addEventListener('input', function () { formatPhoneNumber(this); });
+                // Max length for (XX) XXX-XX-XX is 14 characters
+                modalTelInput.setAttribute('maxlength', '14');
+            }
+        });
+
+        document.getElementById('telegramForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // TELEGRAM BOT SOZLAMALARI:
+            const botToken = '8633900356:AAHvmeJpn-KiJGQwLl3yM0-wHPS5pE1zFTQ';
+            const chatId = '5003281218';
+
+            // IKKINCHI TELEGRAM (AGAR KERAK BO'LSA):
+            const botToken2 = '8682219686:AAHSTC-VkNZ540BjZYmtrojCUpu-RRhhe6o'; // Ikkinchi bot tokeni
+            const chatId2 = '7398539336'; // Ikkinchi chat id si
+
+            const ism = document.getElementById('ism').value;
+            const familiya = document.getElementById('familiya').value;
+            const sinf = document.getElementById('sinf').value;
+            const tel = document.getElementById('tel').value;
+
+            const matn = `🔔 YANGI ARIZA:\n\n👤 Ism: ${ism}\n🧑‍💼 Familiya: ${familiya}\n🏫 Sinf: ${sinf}\n📞 Telefon: ${tel}`;
+
+            const url1 = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(matn)}`;
+            const url2 = `https://api.telegram.org/bot${botToken2}/sendMessage?chat_id=${chatId2}&text=${encodeURIComponent(matn)}`;
+
+            const btn = document.querySelector('.submit-btn');
+            const originalText = btn.innerText;
+            btn.innerText = 'Yuborilmoqda...';
+            btn.disabled = true;
+
+            // Ikkala joyga yuborish
+            const send1 = fetch(url1);
+            const send2 = chatId2 !== 'CHAT_ID_2_SHU_YERGA' ? fetch(url2) : Promise.resolve({ ok: true });
+
+            Promise.all([send1, send2])
+                .then(responses => {
+                    if (responses[0].ok) {
+                        alert('Arizangiz muvaffaqiyatli yuborildi. Tez orada siz bilan bog\'lanamiz!');
+                        document.getElementById('telegramForm').reset();
+                        document.getElementById('tel').value = '+998';
+                    } else {
+                        alert("Xatolik yuz berdi! Bot sozlamalarini tekshiring.");
+                    }
+                })
+                .catch(error => alert("Aloqada xatolik yuz berdi! Internetni tekshiring."))
+                .finally(() => {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                });
+        });
+
+        // MODAL LOGIKASI
+        const modal = document.getElementById('contactModal');
+        const openModalBtns = document.querySelectorAll('.open-modal-btn');
+        const closeModalBtn = document.querySelector('.close-modal');
+
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Scrollni to'xtatish
+            });
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // MODAL TELEGRAM FORM SUBMIT
+        document.getElementById('modalTelegramForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const botToken = '8633900356:AAHvmeJpn-KiJGQwLl3yM0-wHPS5pE1zFTQ';
+            const chatId = '5003281218';
+
+            // IKKINCHI TELEGRAM:
+            const botToken2 = '';
+            const chatId2 = 'CHAT_ID_2_SHU_YERGA';
+
+            const ism = document.getElementById('modalIsm').value;
+            const tel = document.getElementById('modalTel').value;
+
+            const matn = `📩 MA'LUMOT SO'ROVI (Batafsil):\n\n👤 Ism: ${ism}\n📞 Telefon: +998 ${tel}`;
+
+            const url1 = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(matn)}`;
+            const url2 = `https://api.telegram.org/bot${botToken2}/sendMessage?chat_id=${chatId2}&text=${encodeURIComponent(matn)}`;
+
+            const btn = document.querySelector('.modal-submit-btn');
+            const originalText = btn.innerText;
+            btn.innerText = 'Yuborilmoqda...';
+            btn.disabled = true;
+
+            const send1 = fetch(url1);
+            const send2 = chatId2 !== 'CHAT_ID_2_SHU_YERGA' ? fetch(url2) : Promise.resolve({ ok: true });
+
+            Promise.all([send1, send2])
+                .then(responses => {
+                    if (responses[0].ok) {
+                        alert('Ma\'lumotlaringiz muvaffaqiyatli yuborildi. Tez orada bog\'lanamiz!');
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                        document.getElementById('modalTelegramForm').reset();
+                    } else {
+                        alert("Xatolik! Bot sozlanmagan.");
+                    }
+                })
+                .catch(error => alert("Aloqada xatolik yuz berdi!"))
+                .finally(() => {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                });
+        });
+
+        // DARK MODE LOGIKASI
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Saqlangan rejimni tekshirish
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const mode = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', mode);
+
+            // Animatsiya effekti
+            themeToggle.style.transform = 'scale(0.8) rotate(30deg)';
+            setTimeout(() => {
+                themeToggle.style.transform = '';
+            }, 200);
+        });
+
+        // SCROLL ANIMATSIYA LOGIKASI (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-fade-in-up, .animate-fade-in-left, .animate-fade-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Translation System
+        const translations = {
+            'uz': {
+                'nav-about': 'Maktab haqida', 'nav-advantages': 'Afzalliklar', 'nav-opportunities': 'Imkoniyatlar', 'nav-programs': 'Yo\'nalishlar', 'nav-teachers': 'Ustozlar', 'nav-parents': 'Ota-onalar fikri', 'nav-gallery': 'Galereya', 'nav-admission': 'Qabul jarayoni', 'nav-enroll': 'Qabulga yozilish',
+                'gallery-title': 'Maktabimiz hayoti',
+                'hero-tag': 'Yuksalish Maktabi — Kelajak uchun ta\'lim', 'hero-title': 'Sifatli <span class="green-text">ta\'lim</span> bilan<br>kelajagingizni<br><span class="green-text">quring!</span>', 'hero-subtitle': 'Zamonaviy muhit, professional ustozlar va innovatsion yondashuv bilan farzandingizga eng yaxshisini bering.', 'hero-cta': 'Qabulga yozilish',
+                'about-title': 'Maktab haqida', 'about-desc-1': 'Yuksalish maktabi - Ta\'limda amaliy tajribaga asoslanadi. Zamonaviy texnologiyalardan foydalanamiz. Darslarga innovatsion yechimlar bilan yondashamiz. Xalqaro ta\'lim yutuqlaridan foydalanamiz.', 'about-desc-2': 'Tarbiyada yetuk shaxs sifatida kamol topish uchun zarur bo\'ladigan ko\'nikmalarni shakllantiramiz.', 'about-desc-3': 'O\'quvchilarning o\'z imkoniyatlarini to\'liq namoyon etishlari hamda barkamol shaxs bo\'lib yetishishlarida ko\'maklashamiz.', 'about-lang-label': 'Ta\'lim tili:', 'about-lang-val': 'O\'zbek tili', 'about-feat-1-h3': 'Chuqurlashtirilgan fanlar', 'about-feat-1-p': 'Maktabimizda chuqurlashtirilgan fanlarimizga e\'tibor beriladi', 'about-feat-2-h3': 'Ta\'lim tili', 'about-feat-2-p': 'Zamon talabidagi chet tillarini o\'rganish', 'about-feat-3-h3': 'Yuqori malakali ustozlar', 'about-feat-3-p': 'Yuqori malakali ustozlardan bilim olish imkoniyati',
+                'founder-title': 'Maktab asoschisi', 'founder-bio-1': 'Muhammadali Eshonqulov (1994-yilda tug‘ilgan) — o‘zbekistonlik taniqli iqtisodchi, motivatsion spiker, tadbirkor va “Yuksalish Leaders Academy” hamda “Biznes Kvadrat” loyihalari asoschisi.', 'founder-bio-2': 'Yoshlarga shaxsiy rivojlanish, biznes va yetakchilik bo‘yicha saboq beradi, 10 000 ga yaqin shogirdlarga ustozlik qilgan. 15 yoshida Jahon iqtisodiyoti va diplomatiya universiteti talabasi bo‘lgan.', 'founder-quote': 'Sifatli ta\'lim - kelajakning poydevoridir. Biz har bir o\'quvchining ichki potentsialini kashf qilishga yordam beramiz.',
+                'spec-title': 'Ixtisoslashtirilgan sinflar:', 'spec-aniq-h3': 'Aniq fanlar:', 'spec-muhandis-h3': 'Muhandislik sinfi:', 'spec-til-h3': 'Tilshunoslik:', 'spec-tabiiy-h3': 'Tabiiy fanlar:', 'spec-matem': 'Matematika', 'spec-eng': 'Ingliz tili', 'spec-fizika': 'Fizika', 'spec-robo': 'Robototexnika', 'spec-rus': 'Rus tili', 'spec-arab': 'Arab tili', 'spec-koreys': 'Koreys tili', 'spec-kimyo': 'Kimyo', 'spec-bio': 'Biologiya',
+                'adv-title': 'Nega aynan Yuksalish Maktabini tanlashadi?', 'adv-1': 'To\'liq texnologik', 'adv-2': 'Yopiq sport majmuasi', 'adv-3': 'Kitobxonlikka qiziqtirish va mutolaa darslari', 'adv-4': 'Sinflar kesimida IT, sport va san\'at to\'garaklari', 'adv-5': 'Yopiq va qo\'riqlanadigan xavfsiz hudud',
+                'opp-title': 'Yuksalish maktabi imkoniyatlari', 'opp-subtitle': 'Yuksalish maktabi o\'quvchilarga zamonaviy bilim, ijodkorlik va amaliy ko\'nikmalarni rivojlantirish imkonini beradi!', 'opp-1-h3': 'Ko\'nikmalar', 'opp-1-p': 'Bolalarga hayoti davomida muhim bo\'lgan ko\'nikmalarni beramiz', 'opp-2-h3': 'Tarbiyali muhit', 'opp-2-p': 'Bilimga chanqoq va axloqli do\'stlar bilan farzandingizni o\'rab olamiz', 'opp-3-h3': 'Sog\'lom ovqatlanish', 'opp-3-p': 'Bolalar uchun nutritsiolog tavsiya qilgan sog\'lom va foydali taomlar beriladi', 'opp-4-h3': 'Qulay joylashuv', 'opp-4-p': 'Maktab shaharning markazida bo\'lib, istalgan nuqtadan oson yetib kelinadi', 'opp-5-h3': 'Qo\'shimcha mashg\'ulotlar', 'opp-5-p': 'Farzandingiz fan, til, sport va IT bo\'yicha 10 dan ortiq to\'garakda qatnashadi', 'opp-6-h3': 'Zamonaviy sharoitlar', 'opp-6-p': 'O\'quvchilar uchun innovatsion metodlar va qulay ta\'lim muhiti', 'opp-7-h3': 'Grant va stipendiyalar', 'opp-7-p': 'Xalqaro sertifikat olgan o\'quvchilar natijasiga qarab stipendiya yutadi', 'opp-8-h3': 'Cheklangan sinflar', 'opp-8-p': 'Har bir sinfda 22+/-2 o\'quvchi o\'qib, sifatli ta\'lim va e\'tibor kafolatlanadi', 'opp-tag-odob': 'Odob', 'opp-tag-skills': 'Hayotiy ko\'nikmalar', 'opp-tag-axloq': 'Axloq', 'opp-tag-2mahal': '2 mahal', 'opp-tag-light': 'Yengil taomlanish', 'opp-tag-center': 'Shahar markazi', 'opp-tag-transport': 'Transportlar', 'opp-tag-sport': 'Sport', 'opp-tag-kurslar': 'Kurslar', 'opp-tag-equip': 'Qulay jihozlar', 'opp-tag-rooms': 'Zamonaviy xonalar', 'opp-tag-sifat': 'Sifat', 'opp-tag-attention': 'E\'tibor', 'opp-tag-classes': 'Sinflar', 'opp-tag-students': 'O\'quvchilar',
+                'prog-title': 'O\'quv dasturlarimiz', 'prog-subtitle': 'Eng yaxshi ta\'lim sifati, tajribali o\'qituvchilar va innovatsion yondashuv bilan farzandingiz kelajagini biz bilan yarating!', 'prog-cat-1': 'Boshlang\'ich', 'prog-title-1': '1-4 sinflar uchun', 'prog-desc-1': 'O\'quvchilar ilmga muhabbat paydo qilish qatorida boshlang\'ich bilimlar, hayotiy ko\'nikmalar va odoblar shakllantirish jarayoni.', 'prog-cat-2': 'O\'rta', 'prog-title-2': '5-8 sinflar uchun', 'prog-desc-2': 'Barcha fanlardan poydevor bilimlarni egallash, tanqidiy-tahliliy fikrlash va muloqot ko\'nikmalarini rivojlantirish hamda xorijiy tillardan birini o\'zlashtirish jarayoni.', 'prog-cat-3': 'Yuqori', 'prog-title-3': '9-11 sinflar uchun', 'prog-desc-3': 'O\'quvchining salohiyatidan kelib chiqqan holda aniq, tabiiy yoki ijtimoiy fanlardan biriga chuqurlashuv, karyerani aniqlash va oliygohga tayyorgarlik bosqichi.', 'prog-btn': 'Batafsil ma\'lumot',
+                'adm-title': 'Qabul jarayoni bosqichlari', 'adm-step-1-h3': 'Maktabga tashrif', 'adm-step-1-p': 'Bizning maktabimizga tashrif buyurib, maktab bilan tanishib va savollaringizga javoblar oling', 'adm-step-2-h3': 'Belgilangan fanlardan imtihon', 'adm-step-2-p': 'Farzandingizni imtihon qilib uni aqliy salohiyatini aniqlaymiz', 'adm-step-3-h3': 'Farzandingiz bilan suhbat', 'adm-step-3-p': 'Og\'zaki suhbat jarayonida asosan bolaning IQ darajasi, axloqi va tasavvur qobiliyatlarini tekshiramiz', 'adm-step-4-h3': 'Kerakli hujjatlarni taqdim etish', 'adm-step-4-p': 'Yuqoridagi bosqichlardan muvaffaqiyatli o\'tgan o\'quvchilar hujjat topshirish jarayoniga o\'tishlari mumkin bo\'ladi',
+                'enroll-title': 'Qabulga yoziling', 'enroll-desc': 'O\'quv markazimizda yangi o\'quv yili uchun qabul boshlandi! Joylar cheklangan, tezroq yoziling.', 'form-name': 'Ism', 'form-surname': 'Familiya', 'form-class': 'Sinf', 'form-phone': 'Telefon raqam', 'form-submit': 'Ariza qoldirish', 'form-class-placeholder': 'Sinfni tanlang', 'class-0': '0-sinf', 'class-1': '1-sinf', 'class-2': '2-sinf', 'class-3': '3-sinf', 'class-4': '4-sinf', 'class-5': '5-sinf', 'class-6': '6-sinf', 'class-7': '7-sinf', 'class-8': '8-sinf', 'class-9': '9-sinf', 'class-10': '10-sinf', 'class-11': '11-sinf',
+                'modal-title': 'Maktabimiz haqida savollaringiz bo\'lsa, quyida ma\'lumotlaringizni kiriting.', 'modal-subtitle': 'Biz sizga tez orada bog\'lanamiz.', 'footer-contact': 'Aloqa uchun', 'footer-social': 'Bizni ijtimoiy tarmoqlarda kuzating', 'footer-address-label': 'Manzil:', 'footer-address-val': 'Olmaliq shahar, Amir Temur ko\'chasi, 18-uy', 'footer-landmark-label': 'Mo\'ljal:', 'footer-landmark-val': 'Amir Temur ko\'chasi', 'footer-copyright': 'Copyright © 2025 Yuksalish Maktabi. Barcha huquqlar himoyalangan', 'footer-offer': 'Ommaviy taklif'
+            },
+            'ru': {
+                'nav-about': 'О нас', 'nav-advantages': 'Преимущества', 'nav-opportunities': 'Возможности', 'nav-programs': 'Направления', 'nav-teachers': 'Учителя', 'nav-parents': 'Мнения родителей', 'nav-gallery': 'Галерея', 'nav-admission': 'Прием', 'nav-enroll': 'Запись',
+                'gallery-title': 'Жизнь нашей школы',
+                'hero-tag': 'Школа Юксалиш — Образование будущего', 'hero-title': 'Стройте будущее с <span class="green-text">качественным</span><br>образованием!', 'hero-subtitle': 'Дайте лучшее вашему ребенку с современной средой, профессиональными учителями и инновационным подходом.', 'hero-cta': 'Записаться',
+                'about-title': 'О нас', 'about-desc-1': 'Школа Юксалиш основывается на практическом опыте в образовании. Мы используем современные технологии. Подходим к урокам с инновационными решениями. Используем международные достижения.', 'about-desc-2': 'Мы формируем навыки, необходимые для становления зрелой личности в воспитании.', 'about-desc-3': 'Помогаем ученикам полностью проявить свои способности и вырасти гармоничными личностями.', 'about-lang-label': 'Язык обучения:', 'about-lang-val': 'Узбекский язык', 'about-feat-1-h3': 'Углубленные предметы', 'about-feat-1-p': 'В нашей школе уделяется внимание углубленным предметам', 'about-feat-2-h3': 'Язык обучения', 'about-feat-2-p': 'Изучение иностранных языков согласно требованиям времени', 'about-feat-3-h3': 'Высококвалифицированные учителя', 'about-feat-3-p': 'Возможность получать знания от высококвалифицированных наставников',
+                'founder-title': 'Основатель школы', 'founder-bio-1': 'Мухаммадали Эшонкулов (род. 1994) — известный узбекский экономист, мотивационный спикер, предприниматель, основатель Yuksalish Leaders Academy и Бизнес Квадрат.', 'founder-bio-2': 'Обучает молодежь личностному развитию и лидерству, обучил около 10 000 учеников. В 15 лет стал студентом Университета мировой экономики и дипломатии.', 'founder-quote': 'Качественное образование — фундамент будущего. Мы помогаем каждому ученику раскрыть его внутренний потенциал.',
+                'spec-title': 'Специализированные классы:', 'spec-aniq-h3': 'Точные науки:', 'spec-muhandis-h3': 'Инженерный класс:', 'spec-til-h3': 'Лингвистика:', 'spec-tabiiy-h3': 'Естественные науки:', 'spec-matem': 'Математика', 'spec-eng': 'Английский язык', 'spec-fizika': 'Физика', 'spec-robo': 'Робототехника', 'spec-rus': 'Русский язык', 'spec-arab': 'Арабский язык', 'spec-koreys': 'Корейский язык', 'spec-kimyo': 'Химия', 'spec-bio': 'Биология',
+                'adv-title': 'Почему выбирают именно школу Юксалиш?', 'adv-1': 'Полностью технологично', 'adv-2': 'Закрытый спорткомплекс', 'adv-3': 'Привитие любви к чтению и уроки чтения', 'adv-4': 'Кружки IT, спорта и искусства по классам', 'adv-5': 'Закрытая и охраняемая безопасная территория',
+                'opp-title': 'Возможности школы Юксалиш', 'opp-subtitle': 'Школа Юксалиш позволяет ученикам развивать современные знания, креативность и практические навыки!', 'opp-1-h3': 'Навыки', 'opp-1-p': 'Даем детям навыки, важные в течение всей жизни', 'opp-2-h3': 'Воспитательная среда', 'opp-2-p': 'Окружаем вашего ребенка целеустремленными и воспитанными друзьями', 'opp-3-h3': 'Здоровое питание', 'opp-3-p': 'Предоставляется здоровое и полезное питание по рекомендации нутрициолога', 'opp-4-h3': 'Удобное расположение', 'opp-4-p': 'Школа находится в центре города, легко добраться из любой точки', 'opp-5-h3': 'Дополнительные занятия', 'opp-5-p': 'Ваш ребенок посещает более 10 кружков по науке, языкам, спорту и IT', 'opp-6-h3': 'Современные условия', 'opp-6-p': 'Инновационные методы и комфортная среда обучения для учеников', 'opp-7-h3': 'Гранты и стипендии', 'opp-7-p': 'Ученики с международными сертификатами получают стипендии по результатам', 'opp-8-h3': 'Ограниченные классы', 'opp-8-p': 'В каждом классе 22+/-2 ученика, что гарантирует качество и внимание', 'opp-tag-odob': 'Манеры', 'opp-tag-skills': 'Жизненные навыки', 'opp-tag-axloq': 'Мораль', 'opp-tag-2mahal': '2 раза', 'opp-tag-light': 'Легкое питание', 'opp-tag-center': 'Центр города', 'opp-tag-transport': 'Транспорт', 'opp-tag-sport': 'Спорт', 'opp-tag-kurslar': 'Курсы', 'opp-tag-equip': 'Оснащение', 'opp-tag-rooms': 'Современные залы', 'opp-tag-sifat': 'Качество', 'opp-tag-attention': 'Внимание', 'opp-tag-classes': 'Классы', 'opp-tag-students': 'Ученики',
+                'prog-title': 'Наши учебные программы', 'prog-subtitle': 'Создайте будущее своего ребенка с нами благодаря инновационному подходу и качеству образования!', 'prog-cat-1': 'Начальное', 'prog-title-1': 'Для 1-4 классов', 'prog-desc-1': 'Процесс формирования базовых знаний, жизненных навыков и манер наряду с привитием любви к знаниям.', 'prog-cat-2': 'Среднее', 'prog-title-2': 'Для 5-8 классов', 'prog-desc-2': 'Освоение базовых знаний по всем предметам, развитие критического мышления и навыков общения.', 'prog-cat-3': 'Старшее', 'prog-title-3': 'Для 9-11 классов', 'prog-desc-3': 'Углубление в одно из направлений (точные, естественные или гуманитарные науки) и подготовка к вузу.', 'prog-btn': 'Подробнее',
+                'adm-title': 'Этапы процесса приема', 'adm-step-1-h3': 'Визит в школу', 'adm-step-1-p': 'Посетите нашу школу, ознакомьтесь и получите ответы на ваши вопросы', 'adm-step-2-h3': 'Экзамен по предметам', 'adm-step-2-p': 'Проводим экзамен для определения интеллектуального потенциала ребенка', 'adm-step-3-h3': 'Собеседование с ребенком', 'adm-step-3-p': 'В процессе собеседования проверяем уровень IQ, моральные качества и воображение', 'adm-step-4-h3': 'Предоставление документов', 'adm-step-4-p': 'Ученики, успешно прошедшие этапы, могут перейти к подаче документов',
+                'enroll-title': 'Запишитесь на прием', 'enroll-desc': 'В нашем центре начался прием на новый учебный год! Места ограничены, запишитесь скорее.', 'form-name': 'Имя', 'form-surname': 'Фамилия', 'form-class': 'Класс', 'form-phone': 'Номер телефона', 'form-submit': 'Оставить заявку', 'form-class-placeholder': 'Выберите класс', 'class-0': '0-класс', 'class-1': '1-класс', 'class-2': '2-класс', 'class-3': '3-класс', 'class-4': '4-класс', 'class-5': '5-класс', 'class-6': '6-класс', 'class-7': '7-класс', 'class-8': '8-класс', 'class-9': '9-класс', 'class-10': '10-класс', 'class-11': '11-класс',
+                'modal-title': 'Если у вас есть вопросы, введите свои данные ниже.', 'modal-subtitle': 'Мы свяжемся с вами в ближайшее время.', 'footer-contact': 'Контакты', 'footer-social': 'Следите за нами в соцсетях', 'footer-address-label': 'Адрес:', 'footer-address-val': 'г. Алмалык, ул. Амира Темура, 18', 'footer-landmark-label': 'Ориентир:', 'footer-landmark-val': 'ул. Амира Темура', 'footer-copyright': 'Copyright © 2025 Школа Юксалиш. Все права защищены', 'footer-offer': 'Публичная оферта'
+            },
+            'en': {
+                'nav-about': 'About', 'nav-advantages': 'Advantages', 'nav-opportunities': 'Opportunities', 'nav-programs': 'Programs', 'nav-teachers': 'Teachers', 'nav-parents': 'Parents Feedback', 'nav-gallery': 'Gallery', 'nav-admission': 'Admission', 'nav-enroll': 'Enroll',
+                'gallery-title': 'School Life',
+                'hero-tag': 'Yuksalish School — Education for the Future', 'hero-title': 'Build your future with <span class="green-text">quality</span><br>education!', 'hero-subtitle': 'Give the best to your child with a modern environment, professional teachers, and an innovative approach.', 'hero-cta': 'Enroll Now',
+                'about-title': 'About', 'about-desc-1': 'Yuksalish school is based on practical experience in education. We use modern technologies. We approach lessons with innovative solutions. We use international achievements.', 'about-desc-2': 'We develop the skills necessary to become a mature individual in upbringing.', 'about-desc-3': 'We help students fully manifest their potential and develop into harmonious individuals.', 'about-lang-label': 'Instruction Language:', 'about-lang-val': 'Uzbek language', 'about-feat-1-h3': 'Advanced Subjects', 'about-feat-1-p': 'Our school focuses on advanced subjects', 'about-feat-2-h3': 'Instruction Language', 'about-feat-2-p': 'Learning foreign languages according to modern requirements', 'about-feat-3-h3': 'Qualified Teachers', 'about-feat-3-p': 'Opportunity to learn from highly qualified mentors',
+                'founder-title': 'School Founder', 'founder-bio-1': 'Muhammadali Eshonqulov (b. 1994) — well-known Uzbek economist, motivational speaker, entrepreneur, and founder of Yuksalish Leaders Academy and Business Kvadrat.', 'founder-bio-2': 'Teaches youth personal development and leadership, has mentored about 10,000 students. At age 15, he became a student at the University of World Economy and Diplomacy.', 'founder-quote': 'Quality education is the foundation of the future. We help every student discover their internal potential.',
+                'spec-title': 'Specialized Classes:', 'spec-aniq-h3': 'Exact Sciences:', 'spec-muhandis-h3': 'Engineering Class:', 'spec-til-h3': 'Linguistics:', 'spec-tabiiy-h3': 'Natural Sciences:', 'spec-matem': 'Mathematics', 'spec-eng': 'English Language', 'spec-fizika': 'Physics', 'spec-robo': 'Robotics', 'spec-rus': 'Russian Language', 'spec-arab': 'Arabic Language', 'spec-koreys': 'Korean Language', 'spec-kimyo': 'Chemistry', 'spec-bio': 'Biology',
+                'adv-title': 'Why Choose Yuksalish School?', 'adv-1': 'Fully technological', 'adv-2': 'Indoor sports complex', 'adv-3': 'Promoting reading and reading lessons', 'adv-4': 'IT, sports and art clubs by grade', 'adv-5': 'Closed and guarded safe area',
+                'opp-title': 'Yuksalish School Opportunities', 'opp-subtitle': 'Yuksalish School enables students to develop modern knowledge, creativity, and practical skills!', 'opp-1-h3': 'Skills', 'opp-1-p': 'Giving children skills that are important throughout their lives', 'opp-2-h3': 'Educational Environment', 'opp-2-p': 'Surrounding your child with goal-oriented and well-mannered friends', 'opp-3-h3': 'Healthy Nutrition', 'opp-3-p': 'Healthy and beneficial nutrition is provided as recommended by a nutritionist', 'opp-4-h3': 'Convenient Location', 'opp-4-p': 'The school is in the city center, easily accessible from any point', 'opp-5-h3': 'Extra Activities', 'opp-5-p': 'Your child attends over 10 clubs in science, languages, sports, and IT', 'opp-6-h3': 'Modern Conditions', 'opp-6-p': 'Innovative methods and comfortable learning environment for students', 'opp-7-h3': 'Grants and Scholarships', 'opp-7-p': 'Students with international certificates win scholarships based on results', 'opp-8-h3': 'Limited Classes', 'opp-8-p': 'Each class has 22+/-2 students, guaranteeing quality and attention', 'opp-tag-odob': 'Etiquette', 'opp-tag-skills': 'Life Skills', 'opp-tag-axloq': 'Morale', 'opp-tag-2mahal': '2 times', 'opp-tag-light': 'Light meals', 'opp-tag-center': 'City Center', 'opp-tag-transport': 'Transports', 'opp-tag-sport': 'Sport', 'opp-tag-kurslar': 'Courses', 'opp-tag-equip': 'Equipment', 'opp-tag-rooms': 'Modern rooms', 'opp-tag-sifat': 'Quality', 'opp-tag-attention': 'Attention', 'opp-tag-classes': 'Classes', 'opp-tag-students': 'Students',
+                'prog-title': 'Our Educational Programs', 'prog-subtitle': 'Create your child\'s future with us with the best quality of education and innovative approach!', 'prog-cat-1': 'Primary', 'prog-title-1': 'For Grades 1-4', 'prog-desc-1': 'The process of forming basic knowledge, life skills, and etiquette alongside a love for learning.', 'prog-cat-2': 'Secondary', 'prog-title-2': 'For Grades 5-8', 'prog-desc-2': 'Mastering foundational knowledge in all subjects, developing critical thinking and communication skills.', 'prog-cat-3': 'High', 'prog-title-3': 'For Grades 9-11', 'prog-desc-3': 'Deepening in one of the fields (exact, natural, or social sciences) and preparation for university.', 'prog-btn': 'Learn More',
+                'adm-title': 'Admission Process Steps', 'adm-step-1-h3': 'School Visit', 'adm-step-1-p': 'Visit our school, get acquainted and receive answers to your questions', 'adm-step-2-h3': 'Entrance Exam', 'adm-step-2-p': 'Conducting an exam to determine the child\'s intellectual potential', 'adm-step-3-h3': 'Interview with Child', 'adm-step-3-p': 'Checking IQ level, moral qualities, and imagination during the interview', 'adm-step-4-h3': 'Submitting Documents', 'adm-step-4-p': 'Students who successfully pass the steps can proceed to document submission',
+                'enroll-title': 'Enroll Now', 'enroll-desc': 'Admission for the new school year has started in our learning center! Places are limited, enroll soon.', 'form-name': 'Name', 'form-surname': 'Surname', 'form-class': 'Grade', 'form-phone': 'Phone Number', 'form-submit': 'Submit Application', 'form-class-placeholder': 'Select grade', 'class-0': 'Grade-0', 'class-1': 'Grade-1', 'class-2': 'Grade-2', 'class-3': 'Grade-3', 'class-4': 'Grade-4', 'class-5': 'Grade-5', 'class-6': 'Grade-6', 'class-7': 'Grade-7', 'class-8': 'Grade-8', 'class-9': 'Grade-9', 'class-10': 'Grade-10', 'class-11': 'Grade-11',
+                'modal-title': 'If you have questions, enter your details below.', 'modal-subtitle': 'We will contact you soon.', 'footer-contact': 'Contact', 'footer-social': 'Follow Us', 'footer-address-label': 'Address:', 'footer-address-val': 'Almalyk city, Amir Temur street, 18', 'footer-landmark-label': 'Landmark:', 'footer-landmark-val': 'Amir Temur street', 'footer-copyright': 'Copyright © 2025 Yuksalish School. All Rights Reserved', 'footer-offer': 'Public Offer'
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('preferredLanguage', lang);
+            updateUI(lang);
+        }
+
+        function updateUI(lang) {
+            // Update Text
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update Selected Language Display
+            const selectedDisplay = document.getElementById('langSelected');
+            const langNames = { 'uz': 'UZB', 'ru': 'RUS', 'en': 'ENG' };
+            const flags = {
+                'uz': 'https://flagcdn.com/w20/uz.png',
+                'ru': 'https://flagcdn.com/w20/ru.png',
+                'en': 'https://flagcdn.com/w20/gb.png'
+            };
+
+            if (selectedDisplay) {
+                selectedDisplay.querySelector('span').textContent = langNames[lang];
+                selectedDisplay.querySelector('img').src = flags[lang];
+            }
+
+            document.documentElement.lang = lang;
+        }
+
+        // Initialize language
+        const savedLang = localStorage.getItem('preferredLanguage') || 'uz';
+        updateUI(savedLang);
+
+
+        // Menu Toggle (Meatball / 3-Dots)
+        const menuDots = document.getElementById('menuDots');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksA = document.querySelectorAll('.nav-links a');
+
+        if (menuDots && navLinks) {
+            menuDots.addEventListener('click', () => {
+                menuDots.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            navLinksA.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuDots.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!menuDots.contains(e.target) && !navLinks.contains(e.target)) {
+                    menuDots.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+
+        // Modern Teacher Slider Function
+        function scrollSlider(direction) {
+            const wrapper = document.getElementById('jamoaSlider');
+            const content = document.getElementById('jamoaSliderContent');
+            if (!wrapper || !content) return;
+
+            const card = content.querySelector('.teacher-card-modern');
+            if (!card) return;
+
+            const cardWidth = card.getBoundingClientRect().width;
+            const style = window.getComputedStyle(content);
+            const gap = parseFloat(style.gap) || 0;
+
+            const scrollAmount = direction === 'left' ? -(cardWidth + gap) : (cardWidth + gap);
+
+            // Check if reached end to loop back
+            if (direction === 'right' && (wrapper.scrollLeft + wrapper.offsetWidth >= wrapper.scrollWidth - 5)) {
+                wrapper.scrollTo({ left: 0, behavior: 'smooth' });
+            } else if (direction === 'left' && wrapper.scrollLeft <= 5) {
+                wrapper.scrollTo({ left: wrapper.scrollWidth, behavior: 'smooth' });
+            } else {
+                wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        // Auto-scroll initialization
+        let autoScrollTimer;
+        const sliderWrapper = document.getElementById('jamoaSlider');
+
+        function startAutoScroll() {
+            autoScrollTimer = setInterval(() => {
+                scrollSlider('right');
+            }, 2000);
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollTimer);
+        }
+
+        if (sliderWrapper) {
+            startAutoScroll();
+            sliderWrapper.addEventListener('mouseenter', stopAutoScroll);
+            sliderWrapper.addEventListener('mouseleave', startAutoScroll);
+        }
+
+    </script>
+    <footer class="my-signature">
+        <p>© 2026 Yuksalish. Created by Abdugaffarov Islombek</p>
+    </footer>
+</body>
+
+</html>
